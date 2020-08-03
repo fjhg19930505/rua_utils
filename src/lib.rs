@@ -1,3 +1,3 @@
 pub mod utils;
 
-use utils::file_utils::FileUtils;
+pub use utils::file_utils::FileUtils;
