@@ -35,12 +35,12 @@ impl FileUtils {
     pub fn get_file_str(file_name: &str) -> Option<String> {
         let data = match FileUtils::get_file_data(file_name) {
             Ok(file_data) => file_data,
-            _ => None,
+            _ => {return None;},
         };
 
         let data = match String::from_utf8(data) {
             Ok(str) => str,
-            _ => None,
+            _ => {return None;},
         };
 
         Some(data)
